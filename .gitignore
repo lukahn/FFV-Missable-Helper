@@ -1,0 +1,9 @@
+bin/
+obj/
+tools/_master/
+tools/__pycache__/
+assets/bestiary/
+build/
+
+# game and plugin logs that end up next to the source
+*.log

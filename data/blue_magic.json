@@ -1,0 +1,2962 @@
+{
+ "spells": [
+  {
+   "id": 205,
+   "name": "Doom",
+   "enemies": [
+    45,
+    158,
+    174,
+    175,
+    176,
+    177,
+    190,
+    251,
+    299,
+    335,
+    357,
+    367,
+    514
+   ]
+  },
+  {
+   "id": 206,
+   "name": "Roulette",
+   "enemies": [
+    190,
+    195,
+    367,
+    385
+   ]
+  },
+  {
+   "id": 207,
+   "name": "Aqua Breath",
+   "enemies": [
+    63,
+    181,
+    241,
+    306,
+    330,
+    351,
+    354,
+    367
+   ]
+  },
+  {
+   "id": 208,
+   "name": "Level 5 Death",
+   "enemies": [
+    51,
+    109,
+    155,
+    209,
+    367
+   ]
+  },
+  {
+   "id": 209,
+   "name": "Level 4 Graviga",
+   "enemies": [
+    74,
+    109,
+    155,
+    209,
+    367,
+    487
+   ]
+  },
+  {
+   "id": 210,
+   "name": "Level 2 Old",
+   "enemies": [
+    109,
+    125,
+    155,
+    209,
+    367,
+    385
+   ]
+  },
+  {
+   "id": 211,
+   "name": "Level 3 Flare",
+   "enemies": [
+    80,
+    114,
+    131,
+    149,
+    155,
+    209,
+    246,
+    299,
+    335,
+    357,
+    367,
+    385,
+    486,
+    514
+   ]
+  },
+  {
+   "id": 212,
+   "name": "Pond's Chorus",
+   "enemies": [
+    28,
+    72,
+    96,
+    141,
+    194,
+    203,
+    224,
+    237,
+    367,
+    472,
+    473,
+    474
+   ]
+  },
+  {
+   "id": 213,
+   "name": "Lilliputian Lyric",
+   "enemies": [
+    116,
+    154,
+    196,
+    203,
+    224,
+    367
+   ]
+  },
+  {
+   "id": 214,
+   "name": "Flash",
+   "enemies": [
+    27,
+    40,
+    41,
+    69,
+    105,
+    148,
+    195,
+    199,
+    234,
+    238,
+    367,
+    369,
+    477,
+    488,
+    489
+   ]
+  },
+  {
+   "id": 215,
+   "name": "Time Slip",
+   "enemies": [
+    108,
+    154,
+    196,
+    367
+   ]
+  },
+  {
+   "id": 216,
+   "name": "Moon Flute",
+   "enemies": [
+    45,
+    53,
+    154,
+    251
+   ]
+  },
+  {
+   "id": 217,
+   "name": "Death Claw",
+   "enemies": [
+    76,
+    77,
+    170,
+    201,
+    361,
+    367
+   ]
+  },
+  {
+   "id": 218,
+   "name": "Aero",
+   "enemies": [
+    10,
+    44,
+    49,
+    154,
+    288,
+    367
+   ]
+  },
+  {
+   "id": 219,
+   "name": "Aera",
+   "enemies": [
+    10,
+    49,
+    50,
+    70,
+    117,
+    239,
+    309,
+    318,
+    326,
+    367,
+    379
+   ]
+  },
+  {
+   "id": 220,
+   "name": "Aeroga",
+   "enemies": [
+    111,
+    125,
+    138,
+    141,
+    189,
+    196,
+    243,
+    331,
+    367,
+    472,
+    473,
+    474
+   ]
+  },
+  {
+   "id": 221,
+   "name": "Flame Thrower",
+   "enemies": [
+    62,
+    131,
+    206,
+    210,
+    254,
+    280,
+    297,
+    339,
+    346,
+    367,
+    486
+   ]
+  },
+  {
+   "id": 222,
+   "name": "Goblin Punch",
+   "enemies": [
+    1,
+    8,
+    218,
+    222,
+    252,
+    360,
+    367
+   ]
+  },
+  {
+   "id": 223,
+   "name": "Dark Spark",
+   "enemies": [
+    59,
+    77,
+    137,
+    148,
+    168,
+    367
+   ]
+  },
+  {
+   "id": 224,
+   "name": "Off-Guard",
+   "enemies": [
+    53,
+    111,
+    125,
+    137,
+    148,
+    158,
+    243,
+    367
+   ]
+  },
+  {
+   "id": 225,
+   "name": "Transfusion",
+   "enemies": [
+    39,
+    75,
+    81,
+    174,
+    175,
+    176,
+    177,
+    213,
+    345,
+    478
+   ]
+  },
+  {
+   "id": 226,
+   "name": "Mind Blast",
+   "enemies": [
+    210,
+    284,
+    352,
+    367,
+    370
+   ]
+  },
+  {
+   "id": 227,
+   "name": "Vampire",
+   "enemies": [
+    5,
+    89,
+    103,
+    114,
+    136,
+    137,
+    140,
+    167,
+    178,
+    215,
+    240,
+    309,
+    318,
+    326,
+    367,
+    379
+   ]
+  },
+  {
+   "id": 228,
+   "name": "Magic Hammer",
+   "enemies": [
+    33,
+    97,
+    99,
+    156,
+    250,
+    367,
+    376,
+    515
+   ]
+  },
+  {
+   "id": 229,
+   "name": "Mighty Guard",
+   "enemies": [
+    200,
+    228,
+    367,
+    385
+   ]
+  },
+  {
+   "id": 230,
+   "name": "Self-Destruct",
+   "enemies": [
+    43,
+    55,
+    62,
+    174,
+    175,
+    176,
+    177,
+    187,
+    308,
+    367
+   ]
+  },
+  {
+   "id": 231,
+   "name": "???",
+   "enemies": [
+    36,
+    80,
+    85,
+    108,
+    159,
+    202,
+    225,
+    246,
+    280,
+    316,
+    339,
+    367,
+    382
+   ]
+  },
+  {
+   "id": 232,
+   "name": "1000 Needles",
+   "enemies": [
+    71,
+    86,
+    135,
+    146,
+    154,
+    194,
+    367
+   ]
+  },
+  {
+   "id": 233,
+   "name": "White Wind",
+   "enemies": [
+    70,
+    123,
+    195,
+    197,
+    204,
+    239,
+    326,
+    367
+   ]
+  },
+  {
+   "id": 234,
+   "name": "Missile",
+   "enemies": [
+    43,
+    62,
+    280,
+    298,
+    300,
+    326,
+    339,
+    367,
+    383
+   ]
+  }
+ ],
+ "monsters": [
+  {
+   "id": 1,
+   "name": "Goblin",
+   "msg": "MSG_MON_NAME_94"
+  },
+  {
+   "id": 2,
+   "name": "Killer Bee",
+   "msg": "MSG_MON_NAME_75"
+  },
+  {
+   "id": 3,
+   "name": "Nutkin",
+   "msg": "MSG_MON_NAME_180"
+  },
+  {
+   "id": 4,
+   "name": "Stray Cat",
+   "msg": "MSG_MON_NAME_132"
+  },
+  {
+   "id": 5,
+   "name": "Steel Bat",
+   "msg": "MSG_MON_NAME_127"
+  },
+  {
+   "id": 6,
+   "name": "Devil Crab",
+   "msg": "MSG_MON_NAME_155"
+  },
+  {
+   "id": 7,
+   "name": "Stroper",
+   "msg": "MSG_MON_NAME_133"
+  },
+  {
+   "id": 8,
+   "name": "Black Goblin",
+   "msg": "MSG_MON_NAME_221"
+  },
+  {
+   "id": 9,
+   "name": "White Serpent",
+   "msg": "MSG_MON_NAME_237"
+  },
+  {
+   "id": 10,
+   "name": "Moldwynd",
+   "msg": "MSG_MON_NAME_260"
+  },
+  {
+   "id": 11,
+   "name": "Mani Wizard",
+   "msg": "MSG_MON_NAME_246"
+  },
+  {
+   "id": 12,
+   "name": "Magic Pot",
+   "msg": "MSG_MON_NAME_244"
+  },
+  {
+   "id": 13,
+   "name": "Sucker",
+   "msg": "MSG_MON_NAME_101"
+  },
+  {
+   "id": 14,
+   "name": "Octokraken",
+   "msg": "MSG_MON_NAME_52"
+  },
+  {
+   "id": 15,
+   "name": "Gatling",
+   "msg": "MSG_MON_NAME_64"
+  },
+  {
+   "id": 16,
+   "name": "Big Horn",
+   "msg": "MSG_MON_NAME_204"
+  },
+  {
+   "id": 17,
+   "name": "Tatou",
+   "msg": "MSG_MON_NAME_149"
+  },
+  {
+   "id": 18,
+   "name": "Bandersnatch",
+   "msg": "MSG_MON_NAME_201"
+  },
+  {
+   "id": 19,
+   "name": "Garula",
+   "msg": "MSG_MON_NAME_69"
+  },
+  {
+   "id": 20,
+   "name": "Skeleton",
+   "msg": "MSG_MON_NAME_126"
+  },
+  {
+   "id": 21,
+   "name": "Calcruthl",
+   "msg": "MSG_MON_NAME_67"
+  },
+  {
+   "id": 22,
+   "name": "Undead Husk",
+   "msg": "MSG_MON_NAME_31"
+  },
+  {
+   "id": 23,
+   "name": "Mindflusher",
+   "msg": "MSG_MON_NAME_99"
+  },
+  {
+   "id": 24,
+   "name": "Rock Slug",
+   "msg": "MSG_MON_NAME_285"
+  },
+  {
+   "id": 25,
+   "name": "Gaelicat",
+   "msg": "MSG_MON_NAME_90"
+  },
+  {
+   "id": 26,
+   "name": "Cockatrice",
+   "msg": "MSG_MON_NAME_93"
+  },
+  {
+   "id": 27,
+   "name": "Headstone",
+   "msg": "MSG_MON_NAME_228"
+  },
+  {
+   "id": 28,
+   "name": "Elf Toad",
+   "msg": "MSG_MON_NAME_48"
+  },
+  {
+   "id": 29,
+   "name": "Ice Soldier",
+   "msg": "MSG_MON_NAME_10"
+  },
+  {
+   "id": 30,
+   "name": "Ricard Mage",
+   "msg": "MSG_MON_NAME_273"
+  },
+  {
+   "id": 31,
+   "name": "Wyvern",
+   "msg": "MSG_MON_NAME_288"
+  },
+  {
+   "id": 32,
+   "name": "Pas de Seul",
+   "msg": "MSG_MON_NAME_194"
+  },
+  {
+   "id": 33,
+   "name": "Byblos",
+   "msg": "MSG_MON_NAME_205"
+  },
+  {
+   "id": 34,
+   "name": "Aegir",
+   "msg": "MSG_MON_NAME_45"
+  },
+  {
+   "id": 35,
+   "name": "Zu",
+   "msg": "MSG_MON_NAME_125"
+  },
+  {
+   "id": 36,
+   "name": "Wild Nakk",
+   "msg": "MSG_MON_NAME_289"
+  },
+  {
+   "id": 37,
+   "name": "Grass Tortoise",
+   "msg": "MSG_MON_NAME_80"
+  },
+  {
+   "id": 38,
+   "name": "Silent Bee",
+   "msg": "MSG_MON_NAME_100"
+  },
+  {
+   "id": 39,
+   "name": "Mythril Dragon",
+   "msg": "MSG_MON_NAME_250"
+  },
+  {
+   "id": 40,
+   "name": "Ramuh",
+   "msg": "MSG_MON_NAME_267"
+  },
+  {
+   "id": 41,
+   "name": "Crew Dust",
+   "msg": "MSG_MON_NAME_84"
+  },
+  {
+   "id": 42,
+   "name": "Poltergeist",
+   "msg": "MSG_MON_NAME_236"
+  },
+  {
+   "id": 43,
+   "name": "Motor Trap",
+   "msg": "MSG_MON_NAME_262"
+  },
+  {
+   "id": 44,
+   "name": "Defeater",
+   "msg": "MSG_MON_NAME_165"
+  },
+  {
+   "id": 45,
+   "name": "Jackanapes",
+   "msg": "MSG_MON_NAME_66"
+  },
+  {
+   "id": 46,
+   "name": "Sergeant",
+   "msg": "MSG_MON_NAME_89"
+  },
+  {
+   "id": 47,
+   "name": "Sorcerer",
+   "msg": "MSG_MON_NAME_144"
+  },
+  {
+   "id": 48,
+   "name": "Cur Nakk",
+   "msg": "MSG_MON_NAME_68"
+  },
+  {
+   "id": 49,
+   "name": "Gigas",
+   "msg": "MSG_MON_NAME_71"
+  },
+  {
+   "id": 50,
+   "name": "Page 32",
+   "msg": "MSG_MON_NAME_03"
+  },
+  {
+   "id": 51,
+   "name": "Page 64",
+   "msg": "MSG_MON_NAME_04"
+  },
+  {
+   "id": 52,
+   "name": "Page 128",
+   "msg": "MSG_MON_NAME_01"
+  },
+  {
+   "id": 53,
+   "name": "Page 256",
+   "msg": "MSG_MON_NAME_02"
+  },
+  {
+   "id": 54,
+   "name": "Ifrit",
+   "msg": "MSG_MON_NAME_37"
+  },
+  {
+   "id": 55,
+   "name": "Bomb",
+   "msg": "MSG_MON_NAME_235"
+  },
+  {
+   "id": 56,
+   "name": "Doublizard",
+   "msg": "MSG_MON_NAME_150"
+  },
+  {
+   "id": 57,
+   "name": "Bio Soldier",
+   "msg": "MSG_MON_NAME_190"
+  },
+  {
+   "id": 58,
+   "name": "Harvester",
+   "msg": "MSG_MON_NAME_87"
+  },
+  {
+   "id": 59,
+   "name": "Black Flame",
+   "msg": "MSG_MON_NAME_222"
+  },
+  {
+   "id": 60,
+   "name": "Stone Golem",
+   "msg": "MSG_MON_NAME_130"
+  },
+  {
+   "id": 61,
+   "name": "Mini Dragon",
+   "msg": "MSG_MON_NAME_251"
+  },
+  {
+   "id": 62,
+   "name": "Prototype",
+   "msg": "MSG_MON_NAME_229"
+  },
+  {
+   "id": 63,
+   "name": "Dhorme Chimera",
+   "msg": "MSG_MON_NAME_176"
+  },
+  {
+   "id": 64,
+   "name": "Sandboil",
+   "msg": "MSG_MON_NAME_107"
+  },
+  {
+   "id": 65,
+   "name": "Desert Killer",
+   "msg": "MSG_MON_NAME_159"
+  },
+  {
+   "id": 66,
+   "name": "Sand Bear",
+   "msg": "MSG_MON_NAME_106"
+  },
+  {
+   "id": 67,
+   "name": "Ra Mage",
+   "msg": "MSG_MON_NAME_268"
+  },
+  {
+   "id": 68,
+   "name": "Ronkan Knight",
+   "msg": "MSG_MON_NAME_287"
+  },
+  {
+   "id": 69,
+   "name": "Stone Mask",
+   "msg": "MSG_MON_NAME_131"
+  },
+  {
+   "id": 70,
+   "name": "Enchanted Fan",
+   "msg": "MSG_MON_NAME_143"
+  },
+  {
+   "id": 71,
+   "name": "Lamia",
+   "msg": "MSG_MON_NAME_266"
+  },
+  {
+   "id": 72,
+   "name": "Archeotoad",
+   "msg": "MSG_MON_NAME_25"
+  },
+  {
+   "id": 73,
+   "name": "Hydra",
+   "msg": "MSG_MON_NAME_206"
+  },
+  {
+   "id": 74,
+   "name": "Ghidra",
+   "msg": "MSG_MON_NAME_192"
+  },
+  {
+   "id": 75,
+   "name": "Devilfish",
+   "msg": "MSG_MON_NAME_43"
+  },
+  {
+   "id": 76,
+   "name": "Treant",
+   "msg": "MSG_MON_NAME_177"
+  },
+  {
+   "id": 77,
+   "name": "Strapparer",
+   "msg": "MSG_MON_NAME_286"
+  },
+  {
+   "id": 78,
+   "name": "Tarantula",
+   "msg": "MSG_MON_NAME_151"
+  },
+  {
+   "id": 79,
+   "name": "Shell Bear",
+   "msg": "MSG_MON_NAME_112"
+  },
+  {
+   "id": 80,
+   "name": "Tunneller",
+   "msg": "MSG_MON_NAME_279"
+  },
+  {
+   "id": 81,
+   "name": "Birostris",
+   "msg": "MSG_MON_NAME_158"
+  },
+  {
+   "id": 82,
+   "name": "Fairy Orc",
+   "msg": "MSG_MON_NAME_213"
+  },
+  {
+   "id": 83,
+   "name": "Devourer",
+   "msg": "MSG_MON_NAME_164"
+  },
+  {
+   "id": 84,
+   "name": "Mandrake",
+   "msg": "MSG_MON_NAME_249"
+  },
+  {
+   "id": 85,
+   "name": "Kuza Beast",
+   "msg": "MSG_MON_NAME_79"
+  },
+  {
+   "id": 86,
+   "name": "Cactus",
+   "msg": "MSG_MON_NAME_56"
+  },
+  {
+   "id": 87,
+   "name": "Sandcrawler",
+   "msg": "MSG_MON_NAME_105"
+  },
+  {
+   "id": 88,
+   "name": "Shield Dragon",
+   "msg": "MSG_MON_NAME_110"
+  },
+  {
+   "id": 89,
+   "name": "Blood Slime",
+   "msg": "MSG_MON_NAME_223"
+  },
+  {
+   "id": 90,
+   "name": "Acrophies",
+   "msg": "MSG_MON_NAME_12"
+  },
+  {
+   "id": 91,
+   "name": "Moogle Eater",
+   "msg": "MSG_MON_NAME_258"
+  },
+  {
+   "id": 92,
+   "name": "Lesser Lopros",
+   "msg": "MSG_MON_NAME_280"
+  },
+  {
+   "id": 93,
+   "name": "Skull Eater",
+   "msg": "MSG_MON_NAME_168"
+  },
+  {
+   "id": 94,
+   "name": "Aquathorn",
+   "msg": "MSG_MON_NAME_11"
+  },
+  {
+   "id": 95,
+   "name": "Weresnake",
+   "msg": "MSG_MON_NAME_42"
+  },
+  {
+   "id": 96,
+   "name": "Kornago",
+   "msg": "MSG_MON_NAME_97"
+  },
+  {
+   "id": 97,
+   "name": "Cursed Being",
+   "msg": "MSG_MON_NAME_275"
+  },
+  {
+   "id": 98,
+   "name": "Undergrounder",
+   "msg": "MSG_MON_NAME_30"
+  },
+  {
+   "id": 99,
+   "name": "Drippy",
+   "msg": "MSG_MON_NAME_174"
+  },
+  {
+   "id": 100,
+   "name": "Lycaon",
+   "msg": "MSG_MON_NAME_272"
+  },
+  {
+   "id": 101,
+   "name": "Bone Dragon",
+   "msg": "MSG_MON_NAME_233"
+  },
+  {
+   "id": 102,
+   "name": "Poison Eagle",
+   "msg": "MSG_MON_NAME_211"
+  },
+  {
+   "id": 103,
+   "name": "Zombie Dragon",
+   "msg": "MSG_MON_NAME_172"
+  },
+  {
+   "id": 104,
+   "name": "Golem",
+   "msg": "MSG_MON_NAME_92"
+  },
+  {
+   "id": 105,
+   "name": "Neon",
+   "msg": "MSG_MON_NAME_184"
+  },
+  {
+   "id": 106,
+   "name": "Magnetite",
+   "msg": "MSG_MON_NAME_242"
+  },
+  {
+   "id": 107,
+   "name": "Reflect Knight",
+   "msg": "MSG_MON_NAME_277"
+  },
+  {
+   "id": 108,
+   "name": "Traveler",
+   "msg": "MSG_MON_NAME_173"
+  },
+  {
+   "id": 109,
+   "name": "Level Tricker",
+   "msg": "MSG_MON_NAME_283"
+  },
+  {
+   "id": 110,
+   "name": "Gravitator",
+   "msg": "MSG_MON_NAME_81"
+  },
+  {
+   "id": 111,
+   "name": "Ziggurat Gigas",
+   "msg": "MSG_MON_NAME_116"
+  },
+  {
+   "id": 112,
+   "name": "Cure Beast",
+   "msg": "MSG_MON_NAME_73"
+  },
+  {
+   "id": 113,
+   "name": "Land Turtle",
+   "msg": "MSG_MON_NAME_271"
+  },
+  {
+   "id": 114,
+   "name": "Dechirer",
+   "msg": "MSG_MON_NAME_232"
+  },
+  {
+   "id": 115,
+   "name": "Catoblepas",
+   "msg": "MSG_MON_NAME_63"
+  },
+  {
+   "id": 116,
+   "name": "Mini Magician",
+   "msg": "MSG_MON_NAME_252"
+  },
+  {
+   "id": 117,
+   "name": "Galajelly",
+   "msg": "MSG_MON_NAME_61"
+  },
+  {
+   "id": 118,
+   "name": "Mammon",
+   "msg": "MSG_MON_NAME_248"
+  },
+  {
+   "id": 119,
+   "name": "Imp",
+   "msg": "MSG_MON_NAME_39"
+  },
+  {
+   "id": 120,
+   "name": "Wyrm",
+   "msg": "MSG_MON_NAME_40"
+  },
+  {
+   "id": 121,
+   "name": "Twin Lizard",
+   "msg": "MSG_MON_NAME_154"
+  },
+  {
+   "id": 122,
+   "name": "Blind Wolf",
+   "msg": "MSG_MON_NAME_220"
+  },
+  {
+   "id": 123,
+   "name": "Hellraiser",
+   "msg": "MSG_MON_NAME_27"
+  },
+  {
+   "id": 124,
+   "name": "Reflect Mage",
+   "msg": "MSG_MON_NAME_278"
+  },
+  {
+   "id": 125,
+   "name": "Magic Dragon",
+   "msg": "MSG_MON_NAME_243"
+  },
+  {
+   "id": 126,
+   "name": "Black Warlock",
+   "msg": "MSG_MON_NAME_29"
+  },
+  {
+   "id": 127,
+   "name": "Adamantite Golem",
+   "msg": "MSG_MON_NAME_15"
+  },
+  {
+   "id": 128,
+   "name": "Bandercoeurl",
+   "msg": "MSG_MON_NAME_203"
+  },
+  {
+   "id": 129,
+   "name": "Iron Fist",
+   "msg": "MSG_MON_NAME_259"
+  },
+  {
+   "id": 130,
+   "name": "Blue Dragon",
+   "msg": "MSG_MON_NAME_226"
+  },
+  {
+   "id": 131,
+   "name": "Red Dragon",
+   "msg": "MSG_MON_NAME_281"
+  },
+  {
+   "id": 132,
+   "name": "Yellow Dragon",
+   "msg": "MSG_MON_NAME_34"
+  },
+  {
+   "id": 133,
+   "name": "Sleepy",
+   "msg": "MSG_MON_NAME_137"
+  },
+  {
+   "id": 134,
+   "name": "Triffid",
+   "msg": "MSG_MON_NAME_234"
+  },
+  {
+   "id": 135,
+   "name": "Hedgehog",
+   "msg": "MSG_MON_NAME_230"
+  },
+  {
+   "id": 136,
+   "name": "Python",
+   "msg": "MSG_MON_NAME_191"
+  },
+  {
+   "id": 137,
+   "name": "Shadow",
+   "msg": "MSG_MON_NAME_117"
+  },
+  {
+   "id": 138,
+   "name": "Elm Gigas",
+   "msg": "MSG_MON_NAME_49"
+  },
+  {
+   "id": 139,
+   "name": "Pao",
+   "msg": "MSG_MON_NAME_193"
+  },
+  {
+   "id": 140,
+   "name": "Dark Aspic",
+   "msg": "MSG_MON_NAME_265"
+  },
+  {
+   "id": 141,
+   "name": "Metamorph",
+   "msg": "MSG_MON_NAME_256"
+  },
+  {
+   "id": 142,
+   "name": "Unknown",
+   "msg": "MSG_MON_NAME_120"
+  },
+  {
+   "id": 143,
+   "name": "Desertpede",
+   "msg": "MSG_MON_NAME_160"
+  },
+  {
+   "id": 144,
+   "name": "Bulette",
+   "msg": "MSG_MON_NAME_199"
+  },
+  {
+   "id": 145,
+   "name": "Sekhmet",
+   "msg": "MSG_MON_NAME_141"
+  },
+  {
+   "id": 146,
+   "name": "Lamia Queen",
+   "msg": "MSG_MON_NAME_224"
+  },
+  {
+   "id": 147,
+   "name": "Rajiformes",
+   "msg": "MSG_MON_NAME_208"
+  },
+  {
+   "id": 148,
+   "name": "Ushabti",
+   "msg": "MSG_MON_NAME_179"
+  },
+  {
+   "id": 149,
+   "name": "Archeosaur",
+   "msg": "MSG_MON_NAME_24"
+  },
+  {
+   "id": 150,
+   "name": "Zephyrus",
+   "msg": "MSG_MON_NAME_142"
+  },
+  {
+   "id": 151,
+   "name": "Exdeath's Soul",
+   "msg": "MSG_MON_NAME_47"
+  },
+  {
+   "id": 152,
+   "name": "Slug",
+   "msg": "MSG_MON_NAME_136"
+  },
+  {
+   "id": 153,
+   "name": "Gloom Widow",
+   "msg": "MSG_MON_NAME_85"
+  },
+  {
+   "id": 154,
+   "name": "Mykale",
+   "msg": "MSG_MON_NAME_254"
+  },
+  {
+   "id": 155,
+   "name": "Executor",
+   "msg": "MSG_MON_NAME_35"
+  },
+  {
+   "id": 156,
+   "name": "Oiseaurare",
+   "msg": "MSG_MON_NAME_55"
+  },
+  {
+   "id": 157,
+   "name": "Shadow Dancer",
+   "msg": "MSG_MON_NAME_118"
+  },
+  {
+   "id": 158,
+   "name": "The Damned",
+   "msg": "MSG_MON_NAME_188"
+  },
+  {
+   "id": 159,
+   "name": "Numb Blade",
+   "msg": "MSG_MON_NAME_138"
+  },
+  {
+   "id": 160,
+   "name": "Tiny Mage",
+   "msg": "MSG_MON_NAME_148"
+  },
+  {
+   "id": 161,
+   "name": "Chrono Controller",
+   "msg": "MSG_MON_NAME_156"
+  },
+  {
+   "id": 162,
+   "name": "Bone Dragon",
+   "msg": "MSG_MON_NAME_233"
+  },
+  {
+   "id": 163,
+   "name": "Flaremancer",
+   "msg": "MSG_MON_NAME_227"
+  },
+  {
+   "id": 164,
+   "name": "Dueling Knight",
+   "msg": "MSG_MON_NAME_166"
+  },
+  {
+   "id": 165,
+   "name": "Iron Muscles",
+   "msg": "MSG_MON_NAME_06"
+  },
+  {
+   "id": 166,
+   "name": "Berserker",
+   "msg": "MSG_MON_NAME_189"
+  },
+  {
+   "id": 167,
+   "name": "Zombie Dragon",
+   "msg": "MSG_MON_NAME_172"
+  },
+  {
+   "id": 168,
+   "name": "Druid",
+   "msg": "MSG_MON_NAME_175"
+  },
+  {
+   "id": 169,
+   "name": "Ironback",
+   "msg": "MSG_MON_NAME_08"
+  },
+  {
+   "id": 170,
+   "name": "Objet d'Art",
+   "msg": "MSG_MON_NAME_140"
+  },
+  {
+   "id": 171,
+   "name": "Frost Bull",
+   "msg": "MSG_MON_NAME_225"
+  },
+  {
+   "id": 172,
+   "name": "Istory Lythos",
+   "msg": "MSG_MON_NAME_36"
+  },
+  {
+   "id": 173,
+   "name": "Spizzner",
+   "msg": "MSG_MON_NAME_134"
+  },
+  {
+   "id": 174,
+   "name": "Unknown",
+   "msg": "MSG_MON_NAME_120"
+  },
+  {
+   "id": 175,
+   "name": "Unknown",
+   "msg": "MSG_MON_NAME_120"
+  },
+  {
+   "id": 176,
+   "name": "Unknown",
+   "msg": "MSG_MON_NAME_120"
+  },
+  {
+   "id": 177,
+   "name": "Unknown",
+   "msg": "MSG_MON_NAME_120"
+  },
+  {
+   "id": 178,
+   "name": "Mercury Bat",
+   "msg": "MSG_MON_NAME_239"
+  },
+  {
+   "id": 179,
+   "name": "Coral",
+   "msg": "MSG_MON_NAME_96"
+  },
+  {
+   "id": 180,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 181,
+   "name": "Aquagel",
+   "msg": "MSG_MON_NAME_114"
+  },
+  {
+   "id": 182,
+   "name": "Steel Fist",
+   "msg": "MSG_MON_NAME_215"
+  },
+  {
+   "id": 183,
+   "name": "Alchymia",
+   "msg": "MSG_MON_NAME_22"
+  },
+  {
+   "id": 184,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 185,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 187,
+   "name": "Grenade",
+   "msg": "MSG_MON_NAME_88"
+  },
+  {
+   "id": 188,
+   "name": "Sword Dancer",
+   "msg": "MSG_MON_NAME_145"
+  },
+  {
+   "id": 189,
+   "name": "Baldanders",
+   "msg": "MSG_MON_NAME_198"
+  },
+  {
+   "id": 190,
+   "name": "Death Dealer",
+   "msg": "MSG_MON_NAME_162"
+  },
+  {
+   "id": 191,
+   "name": "Ankheg",
+   "msg": "MSG_MON_NAME_28"
+  },
+  {
+   "id": 192,
+   "name": "Ammonite",
+   "msg": "MSG_MON_NAME_33"
+  },
+  {
+   "id": 193,
+   "name": "Landcrawler",
+   "msg": "MSG_MON_NAME_270"
+  },
+  {
+   "id": 194,
+   "name": "Lemure",
+   "msg": "MSG_MON_NAME_152"
+  },
+  {
+   "id": 195,
+   "name": "Parthenope",
+   "msg": "MSG_MON_NAME_95"
+  },
+  {
+   "id": 196,
+   "name": "Cherie",
+   "msg": "MSG_MON_NAME_113"
+  },
+  {
+   "id": 197,
+   "name": "White Flame",
+   "msg": "MSG_MON_NAME_238"
+  },
+  {
+   "id": 198,
+   "name": "Moss Fungus",
+   "msg": "MSG_MON_NAME_261"
+  },
+  {
+   "id": 199,
+   "name": "Orukat",
+   "msg": "MSG_MON_NAME_54"
+  },
+  {
+   "id": 200,
+   "name": "Iron Giant",
+   "msg": "MSG_MON_NAME_163"
+  },
+  {
+   "id": 201,
+   "name": "Death Claw",
+   "msg": "MSG_MON_NAME_161"
+  },
+  {
+   "id": 202,
+   "name": "King Behemoth",
+   "msg": "MSG_MON_NAME_78"
+  },
+  {
+   "id": 203,
+   "name": "Farfarello",
+   "msg": "MSG_MON_NAME_212"
+  },
+  {
+   "id": 204,
+   "name": "Necromancer",
+   "msg": "MSG_MON_NAME_186"
+  },
+  {
+   "id": 205,
+   "name": "Ninja",
+   "msg": "MSG_MON_NAME_181"
+  },
+  {
+   "id": 206,
+   "name": "Great Dragon",
+   "msg": "MSG_MON_NAME_171"
+  },
+  {
+   "id": 207,
+   "name": "Dragon Aevis",
+   "msg": "MSG_MON_NAME_170"
+  },
+  {
+   "id": 208,
+   "name": "Gorgimera",
+   "msg": "MSG_MON_NAME_91"
+  },
+  {
+   "id": 209,
+   "name": "Level Checker",
+   "msg": "MSG_MON_NAME_282"
+  },
+  {
+   "id": 210,
+   "name": "Mindflayer",
+   "msg": "MSG_MON_NAME_240"
+  },
+  {
+   "id": 211,
+   "name": "Fury",
+   "msg": "MSG_MON_NAME_218"
+  },
+  {
+   "id": 212,
+   "name": "Crystelle",
+   "msg": "MSG_MON_NAME_122"
+  },
+  {
+   "id": 213,
+   "name": "Mover",
+   "msg": "MSG_MON_NAME_255"
+  },
+  {
+   "id": 214,
+   "name": "Crystal Dragon",
+   "msg": "MSG_MON_NAME_124"
+  },
+  {
+   "id": 215,
+   "name": "Achelon",
+   "msg": "MSG_MON_NAME_13"
+  },
+  {
+   "id": 216,
+   "name": "Yojimbo",
+   "msg": "MSG_MON_NAME_264"
+  },
+  {
+   "id": 217,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 218,
+   "name": "Sahagin",
+   "msg": "MSG_MON_NAME_102"
+  },
+  {
+   "id": 219,
+   "name": "Thunder Anemone",
+   "msg": "MSG_MON_NAME_103"
+  },
+  {
+   "id": 220,
+   "name": "Sea Ibis",
+   "msg": "MSG_MON_NAME_108"
+  },
+  {
+   "id": 221,
+   "name": "Corbett",
+   "msg": "MSG_MON_NAME_98"
+  },
+  {
+   "id": 222,
+   "name": "Nix",
+   "msg": "MSG_MON_NAME_05"
+  },
+  {
+   "id": 223,
+   "name": "Water Scorpion",
+   "msg": "MSG_MON_NAME_44"
+  },
+  {
+   "id": 224,
+   "name": "Vilia",
+   "msg": "MSG_MON_NAME_121"
+  },
+  {
+   "id": 225,
+   "name": "Gel Fish",
+   "msg": "MSG_MON_NAME_115"
+  },
+  {
+   "id": 226,
+   "name": "Rukh",
+   "msg": "MSG_MON_NAME_74"
+  },
+  {
+   "id": 227,
+   "name": "Sea Devil",
+   "msg": "MSG_MON_NAME_109"
+  },
+  {
+   "id": 228,
+   "name": "Stingray",
+   "msg": "MSG_MON_NAME_128"
+  },
+  {
+   "id": 229,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 230,
+   "name": "Golem",
+   "msg": "MSG_MON_NAME_92"
+  },
+  {
+   "id": 231,
+   "name": "None",
+   "msg": "None"
+  },
+  {
+   "id": 232,
+   "name": "Shiva",
+   "msg": "MSG_MON_NAME_111"
+  },
+  {
+   "id": 233,
+   "name": "Ifrit",
+   "msg": "MSG_MON_NAME_37"
+  },
+  {
+   "id": 234,
+   "name": "Ramuh",
+   "msg": "MSG_MON_NAME_267"
+  },
+  {
+   "id": 235,
+   "name": "Gaelicat",
+   "msg": "MSG_MON_NAME_90"
+  },
+  {
+   "id": 236,
+   "name": "Wyvern",
+   "msg": "MSG_MON_NAME_288"
+  },
+  {
+   "id": 237,
+   "name": "Elf Toad",
+   "msg": "MSG_MON_NAME_48"
+  },
+  {
+   "id": 238,
+   "name": "Crew Dust",
+   "msg": "MSG_MON_NAME_84"
+  },
+  {
+   "id": 239,
+   "name": "Enchanted Fan",
+   "msg": "MSG_MON_NAME_143"
+  },
+  {
+   "id": 240,
+   "name": "Zombie Dragon",
+   "msg": "MSG_MON_NAME_172"
+  },
+  {
+   "id": 241,
+   "name": "Dhorme Chimera",
+   "msg": "MSG_MON_NAME_176"
+  },
+  {
+   "id": 242,
+   "name": "Adamantite Golem",
+   "msg": "MSG_MON_NAME_15"
+  },
+  {
+   "id": 243,
+   "name": "Ziggurat Gigas",
+   "msg": "MSG_MON_NAME_116"
+  },
+  {
+   "id": 244,
+   "name": "Ronkan Knight",
+   "msg": "MSG_MON_NAME_287"
+  },
+  {
+   "id": 245,
+   "name": "Bio Soldier",
+   "msg": "MSG_MON_NAME_190"
+  },
+  {
+   "id": 246,
+   "name": "Tunneller",
+   "msg": "MSG_MON_NAME_279"
+  },
+  {
+   "id": 247,
+   "name": "Tot Aevis",
+   "msg": "MSG_MON_NAME_167"
+  },
+  {
+   "id": 248,
+   "name": "Belphegor",
+   "msg": "MSG_MON_NAME_231"
+  },
+  {
+   "id": 249,
+   "name": "Imp",
+   "msg": "MSG_MON_NAME_39"
+  },
+  {
+   "id": 250,
+   "name": "Oiseaurare",
+   "msg": "MSG_MON_NAME_55"
+  },
+  {
+   "id": 251,
+   "name": "Jackanapes",
+   "msg": "MSG_MON_NAME_66"
+  },
+  {
+   "id": 252,
+   "name": "Gobbledygook",
+   "msg": "MSG_MON_NAME_65"
+  },
+  {
+   "id": 253,
+   "name": "Gil Turtle",
+   "msg": "MSG_MON_NAME_76"
+  },
+  {
+   "id": 254,
+   "name": "Omega",
+   "msg": "MSG_MON_NAME_53"
+  },
+  {
+   "id": 280,
+   "name": "Mecha Head",
+   "msg": "MSG_MON_NAME_245"
+  },
+  {
+   "id": 281,
+   "name": "Wing Raptor",
+   "msg": "MSG_MON_NAME_41"
+  },
+  {
+   "id": 282,
+   "name": "Wing Raptor",
+   "msg": "MSG_MON_NAME_41"
+  },
+  {
+   "id": 283,
+   "name": "Karlabos",
+   "msg": "MSG_MON_NAME_59"
+  },
+  {
+   "id": 284,
+   "name": "Twintania",
+   "msg": "MSG_MON_NAME_153"
+  },
+  {
+   "id": 285,
+   "name": "Siren",
+   "msg": "MSG_MON_NAME_139"
+  },
+  {
+   "id": 286,
+   "name": "Siren",
+   "msg": "MSG_MON_NAME_139"
+  },
+  {
+   "id": 287,
+   "name": "Forza",
+   "msg": "MSG_MON_NAME_216"
+  },
+  {
+   "id": 288,
+   "name": "Magissa",
+   "msg": "MSG_MON_NAME_241"
+  },
+  {
+   "id": 289,
+   "name": "Garula",
+   "msg": "MSG_MON_NAME_69"
+  },
+  {
+   "id": 290,
+   "name": "Liquid Flame",
+   "msg": "MSG_MON_NAME_274"
+  },
+  {
+   "id": 291,
+   "name": "Liquid Flame",
+   "msg": "MSG_MON_NAME_274"
+  },
+  {
+   "id": 292,
+   "name": "Liquid Flame",
+   "msg": "MSG_MON_NAME_274"
+  },
+  {
+   "id": 293,
+   "name": "Ice Commander",
+   "msg": "MSG_MON_NAME_09"
+  },
+  {
+   "id": 294,
+   "name": "Sandworm",
+   "msg": "MSG_MON_NAME_104"
+  },
+  {
+   "id": 295,
+   "name": "Hole",
+   "msg": "MSG_MON_NAME_18"
+  },
+  {
+   "id": 296,
+   "name": "Adamantoise",
+   "msg": "MSG_MON_NAME_16"
+  },
+  {
+   "id": 297,
+   "name": "Flame Thrower",
+   "msg": "MSG_MON_NAME_60"
+  },
+  {
+   "id": 298,
+   "name": "Rocket Launcher",
+   "msg": "MSG_MON_NAME_284"
+  },
+  {
+   "id": 299,
+   "name": "Exdeath",
+   "msg": "MSG_MON_NAME_46"
+  },
+  {
+   "id": 300,
+   "name": "Soul Cannon",
+   "msg": "MSG_MON_NAME_146"
+  },
+  {
+   "id": 301,
+   "name": "Archeoaevis",
+   "msg": "MSG_MON_NAME_23"
+  },
+  {
+   "id": 302,
+   "name": "Archeoaevis",
+   "msg": "MSG_MON_NAME_23"
+  },
+  {
+   "id": 303,
+   "name": "Archeoaevis",
+   "msg": "MSG_MON_NAME_23"
+  },
+  {
+   "id": 304,
+   "name": "Archeoaevis",
+   "msg": "MSG_MON_NAME_23"
+  },
+  {
+   "id": 305,
+   "name": "Archeoaevis",
+   "msg": "MSG_MON_NAME_23"
+  },
+  {
+   "id": 306,
+   "name": "Chimera Brain",
+   "msg": "MSG_MON_NAME_72"
+  },
+  {
+   "id": 307,
+   "name": "Titan",
+   "msg": "MSG_MON_NAME_147"
+  },
+  {
+   "id": 308,
+   "name": "Purobolos",
+   "msg": "MSG_MON_NAME_207"
+  },
+  {
+   "id": 309,
+   "name": "Abductor",
+   "msg": "MSG_MON_NAME_20"
+  },
+  {
+   "id": 310,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 311,
+   "name": "Merrow",
+   "msg": "MSG_MON_NAME_200"
+  },
+  {
+   "id": 312,
+   "name": "Flying Killer",
+   "msg": "MSG_MON_NAME_219"
+  },
+  {
+   "id": 313,
+   "name": "Little Chariot",
+   "msg": "MSG_MON_NAME_217"
+  },
+  {
+   "id": 314,
+   "name": "Neo Garula",
+   "msg": "MSG_MON_NAME_183"
+  },
+  {
+   "id": 315,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 316,
+   "name": "Tyrannosaur",
+   "msg": "MSG_MON_NAME_157"
+  },
+  {
+   "id": 317,
+   "name": "Shiva",
+   "msg": "MSG_MON_NAME_111"
+  },
+  {
+   "id": 318,
+   "name": "Abductor",
+   "msg": "MSG_MON_NAME_20"
+  },
+  {
+   "id": 319,
+   "name": "Dragon Pod",
+   "msg": "MSG_MON_NAME_210"
+  },
+  {
+   "id": 320,
+   "name": "Dragon Flower",
+   "msg": "MSG_MON_NAME_209"
+  },
+  {
+   "id": 321,
+   "name": "Dragon Flower",
+   "msg": "MSG_MON_NAME_209"
+  },
+  {
+   "id": 322,
+   "name": "Dragon Flower",
+   "msg": "MSG_MON_NAME_209"
+  },
+  {
+   "id": 323,
+   "name": "Dragon Flower",
+   "msg": "MSG_MON_NAME_209"
+  },
+  {
+   "id": 324,
+   "name": "Dragon Flower",
+   "msg": "MSG_MON_NAME_209"
+  },
+  {
+   "id": 325,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 326,
+   "name": "Enkidu",
+   "msg": "MSG_MON_NAME_50"
+  },
+  {
+   "id": 327,
+   "name": "Atomos",
+   "msg": "MSG_MON_NAME_17"
+  },
+  {
+   "id": 328,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 329,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 330,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 331,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 332,
+   "name": "Carbuncle",
+   "msg": "MSG_MON_NAME_58"
+  },
+  {
+   "id": 334,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 335,
+   "name": "Exdeath",
+   "msg": "MSG_MON_NAME_46"
+  },
+  {
+   "id": 336,
+   "name": "Antlion",
+   "msg": "MSG_MON_NAME_32"
+  },
+  {
+   "id": 337,
+   "name": "Mummy",
+   "msg": "MSG_MON_NAME_247"
+  },
+  {
+   "id": 338,
+   "name": "Aspis",
+   "msg": "MSG_MON_NAME_14"
+  },
+  {
+   "id": 339,
+   "name": "Mecha Head",
+   "msg": "MSG_MON_NAME_245"
+  },
+  {
+   "id": 340,
+   "name": "Melusine",
+   "msg": "MSG_MON_NAME_257"
+  },
+  {
+   "id": 341,
+   "name": "Melusine",
+   "msg": "MSG_MON_NAME_257"
+  },
+  {
+   "id": 342,
+   "name": "Melusine",
+   "msg": "MSG_MON_NAME_257"
+  },
+  {
+   "id": 343,
+   "name": "Melusine",
+   "msg": "MSG_MON_NAME_257"
+  },
+  {
+   "id": 344,
+   "name": "Odin",
+   "msg": "MSG_MON_NAME_51"
+  },
+  {
+   "id": 345,
+   "name": "Gargoyle",
+   "msg": "MSG_MON_NAME_57"
+  },
+  {
+   "id": 346,
+   "name": "Triton",
+   "msg": "MSG_MON_NAME_169"
+  },
+  {
+   "id": 347,
+   "name": "Nereid",
+   "msg": "MSG_MON_NAME_187"
+  },
+  {
+   "id": 348,
+   "name": "Phobos",
+   "msg": "MSG_MON_NAME_214"
+  },
+  {
+   "id": 349,
+   "name": "Omniscient",
+   "msg": "MSG_MON_NAME_135"
+  },
+  {
+   "id": 350,
+   "name": "Minotaur",
+   "msg": "MSG_MON_NAME_253"
+  },
+  {
+   "id": 351,
+   "name": "Leviathan",
+   "msg": "MSG_MON_NAME_276"
+  },
+  {
+   "id": 352,
+   "name": "Wendigo",
+   "msg": "MSG_MON_NAME_129"
+  },
+  {
+   "id": 353,
+   "name": "Famed Mimic Gogo",
+   "msg": "MSG_MON_NAME_263"
+  },
+  {
+   "id": 354,
+   "name": "Bahamut",
+   "msg": "MSG_MON_NAME_195"
+  },
+  {
+   "id": 355,
+   "name": "Jura Aevis",
+   "msg": "MSG_MON_NAME_119"
+  },
+  {
+   "id": 356,
+   "name": "Halicarnassus",
+   "msg": "MSG_MON_NAME_197"
+  },
+  {
+   "id": 357,
+   "name": "Exdeath",
+   "msg": "MSG_MON_NAME_46"
+  },
+  {
+   "id": 358,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 359,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 360,
+   "name": "Goblin",
+   "msg": "MSG_MON_NAME_94"
+  },
+  {
+   "id": 361,
+   "name": "Iron Claw",
+   "msg": "MSG_MON_NAME_07"
+  },
+  {
+   "id": 362,
+   "name": "Sergeant",
+   "msg": "MSG_MON_NAME_89"
+  },
+  {
+   "id": 363,
+   "name": "Cur Nakk",
+   "msg": "MSG_MON_NAME_68"
+  },
+  {
+   "id": 364,
+   "name": "Cray Claw",
+   "msg": "MSG_MON_NAME_86"
+  },
+  {
+   "id": 366,
+   "name": "Calofisteri",
+   "msg": "MSG_MON_NAME_70"
+  },
+  {
+   "id": 367,
+   "name": "Azulmagia",
+   "msg": "MSG_MON_NAME_21"
+  },
+  {
+   "id": 368,
+   "name": "Catastrophe",
+   "msg": "MSG_MON_NAME_62"
+  },
+  {
+   "id": 369,
+   "name": "Necrophobe",
+   "msg": "MSG_MON_NAME_185"
+  },
+  {
+   "id": 370,
+   "name": "Twintania",
+   "msg": "MSG_MON_NAME_153"
+  },
+  {
+   "id": 371,
+   "name": "Launcher",
+   "msg": "MSG_MON_NAME_269"
+  },
+  {
+   "id": 372,
+   "name": "Launcher",
+   "msg": "MSG_MON_NAME_269"
+  },
+  {
+   "id": 373,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 374,
+   "name": "Carbuncle",
+   "msg": "MSG_MON_NAME_58"
+  },
+  {
+   "id": 375,
+   "name": "Grand Mummy",
+   "msg": "MSG_MON_NAME_82"
+  },
+  {
+   "id": 376,
+   "name": "Apanda",
+   "msg": "MSG_MON_NAME_19"
+  },
+  {
+   "id": 377,
+   "name": "Alte Roite",
+   "msg": "MSG_MON_NAME_26"
+  },
+  {
+   "id": 378,
+   "name": "Covert",
+   "msg": "MSG_MON_NAME_38"
+  },
+  {
+   "id": 379,
+   "name": "Abductor",
+   "msg": "MSG_MON_NAME_20"
+  },
+  {
+   "id": 380,
+   "name": "Bandercoeurl",
+   "msg": "MSG_MON_NAME_203"
+  },
+  {
+   "id": 381,
+   "name": "Liquid Flame",
+   "msg": "MSG_MON_NAME_274"
+  },
+  {
+   "id": 382,
+   "name": "Kuza Beast",
+   "msg": "MSG_MON_NAME_79"
+  },
+  {
+   "id": 383,
+   "name": "Soul Cannon",
+   "msg": "MSG_MON_NAME_146"
+  },
+  {
+   "id": 384,
+   "name": "Pantera",
+   "msg": "MSG_MON_NAME_202"
+  },
+  {
+   "id": 385,
+   "name": "Shinryu",
+   "msg": "MSG_MON_NAME_123"
+  },
+  {
+   "id": 386,
+   "name": "Barrier",
+   "msg": "MSG_MON_NAME_196"
+  },
+  {
+   "id": 387,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 388,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 389,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 390,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 391,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 472,
+   "name": "Metamorph",
+   "msg": "MSG_MON_NAME_256"
+  },
+  {
+   "id": 473,
+   "name": "Metamorph",
+   "msg": "MSG_MON_NAME_256"
+  },
+  {
+   "id": 474,
+   "name": "Metamorph",
+   "msg": "MSG_MON_NAME_256"
+  },
+  {
+   "id": 475,
+   "name": "Zephyrus",
+   "msg": "MSG_MON_NAME_142"
+  },
+  {
+   "id": 476,
+   "name": "Zephyrus",
+   "msg": "MSG_MON_NAME_142"
+  },
+  {
+   "id": 477,
+   "name": "Necrophobe",
+   "msg": "MSG_MON_NAME_185"
+  },
+  {
+   "id": 478,
+   "name": "Mover",
+   "msg": "MSG_MON_NAME_255"
+  },
+  {
+   "id": 481,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 482,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 483,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 484,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 485,
+   "name": "Tonberry",
+   "msg": "MSG_MON_NAME_178"
+  },
+  {
+   "id": 486,
+   "name": "Red Dragon",
+   "msg": "MSG_MON_NAME_281"
+  },
+  {
+   "id": 487,
+   "name": "Ghidra",
+   "msg": "MSG_MON_NAME_192"
+  },
+  {
+   "id": 488,
+   "name": "Necrophobe",
+   "msg": "MSG_MON_NAME_185"
+  },
+  {
+   "id": 489,
+   "name": "Necrophobe",
+   "msg": "MSG_MON_NAME_185"
+  },
+  {
+   "id": 490,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 491,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 492,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 493,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 494,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 495,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 496,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 497,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 498,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 499,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 500,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 501,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 502,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 503,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 504,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 505,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 506,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 507,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 508,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 509,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 510,
+   "name": "Covert",
+   "msg": "MSG_MON_NAME_38"
+  },
+  {
+   "id": 511,
+   "name": "Neo Exdeath",
+   "msg": "MSG_MON_NAME_182"
+  },
+  {
+   "id": 512,
+   "name": "???",
+   "msg": "MSG_MON_NAME_290"
+  },
+  {
+   "id": 513,
+   "name": "Antlion",
+   "msg": "MSG_MON_NAME_32"
+  },
+  {
+   "id": 514,
+   "name": "Exdeath",
+   "msg": "MSG_MON_NAME_46"
+  },
+  {
+   "id": 515,
+   "name": "Byblos",
+   "msg": "MSG_MON_NAME_205"
+  },
+  {
+   "id": 516,
+   "name": "Gilgamesh",
+   "msg": "MSG_MON_NAME_77"
+  },
+  {
+   "id": 517,
+   "name": "Melusine",
+   "msg": "MSG_MON_NAME_257"
+  }
+ ],
+ "aliases": [
+  {
+   "abilityId": 383,
+   "contentId": 649,
+   "spellId": 205
+  },
+  {
+   "abilityId": 384,
+   "contentId": 650,
+   "spellId": 206
+  },
+  {
+   "abilityId": 385,
+   "contentId": 651,
+   "spellId": 207
+  },
+  {
+   "abilityId": 386,
+   "contentId": 652,
+   "spellId": 208
+  },
+  {
+   "abilityId": 387,
+   "contentId": 653,
+   "spellId": 209
+  },
+  {
+   "abilityId": 388,
+   "contentId": 654,
+   "spellId": 210
+  },
+  {
+   "abilityId": 389,
+   "contentId": 655,
+   "spellId": 211
+  },
+  {
+   "abilityId": 390,
+   "contentId": 656,
+   "spellId": 212
+  },
+  {
+   "abilityId": 391,
+   "contentId": 657,
+   "spellId": 213
+  },
+  {
+   "abilityId": 392,
+   "contentId": 658,
+   "spellId": 214
+  },
+  {
+   "abilityId": 393,
+   "contentId": 659,
+   "spellId": 215
+  },
+  {
+   "abilityId": 394,
+   "contentId": 660,
+   "spellId": 216
+  },
+  {
+   "abilityId": 395,
+   "contentId": 661,
+   "spellId": 217
+  },
+  {
+   "abilityId": 396,
+   "contentId": 662,
+   "spellId": 218
+  },
+  {
+   "abilityId": 397,
+   "contentId": 663,
+   "spellId": 219
+  },
+  {
+   "abilityId": 398,
+   "contentId": 664,
+   "spellId": 220
+  },
+  {
+   "abilityId": 399,
+   "contentId": 665,
+   "spellId": 221
+  },
+  {
+   "abilityId": 400,
+   "contentId": 666,
+   "spellId": 222
+  },
+  {
+   "abilityId": 401,
+   "contentId": 667,
+   "spellId": 223
+  },
+  {
+   "abilityId": 402,
+   "contentId": 668,
+   "spellId": 224
+  },
+  {
+   "abilityId": 403,
+   "contentId": 669,
+   "spellId": 225
+  },
+  {
+   "abilityId": 404,
+   "contentId": 670,
+   "spellId": 226
+  },
+  {
+   "abilityId": 405,
+   "contentId": 671,
+   "spellId": 227
+  },
+  {
+   "abilityId": 406,
+   "contentId": 672,
+   "spellId": 228
+  },
+  {
+   "abilityId": 407,
+   "contentId": 673,
+   "spellId": 229
+  },
+  {
+   "abilityId": 408,
+   "contentId": 674,
+   "spellId": 230
+  },
+  {
+   "abilityId": 409,
+   "contentId": 675,
+   "spellId": 231
+  },
+  {
+   "abilityId": 410,
+   "contentId": 676,
+   "spellId": 232
+  },
+  {
+   "abilityId": 411,
+   "contentId": 677,
+   "spellId": 233
+  },
+  {
+   "abilityId": 412,
+   "contentId": 678,
+   "spellId": 234
+  },
+  {
+   "abilityId": 713,
+   "contentId": 1070,
+   "spellId": 220
+  },
+  {
+   "abilityId": 716,
+   "contentId": 1073,
+   "spellId": 218
+  },
+  {
+   "abilityId": 724,
+   "contentId": 1081,
+   "spellId": 222
+  },
+  {
+   "abilityId": 731,
+   "contentId": 1088,
+   "spellId": 218
+  },
+  {
+   "abilityId": 738,
+   "contentId": 1095,
+   "spellId": 230
+  },
+  {
+   "abilityId": 743,
+   "contentId": 1100,
+   "spellId": 225
+  },
+  {
+   "abilityId": 751,
+   "contentId": 1108,
+   "spellId": 214
+  },
+  {
+   "abilityId": 752,
+   "contentId": 1109,
+   "spellId": 212
+  },
+  {
+   "abilityId": 763,
+   "contentId": 1120,
+   "spellId": 219
+  },
+  {
+   "abilityId": 770,
+   "contentId": 1127,
+   "spellId": 223
+  },
+  {
+   "abilityId": 780,
+   "contentId": 1137,
+   "spellId": 219
+  },
+  {
+   "abilityId": 781,
+   "contentId": 1138,
+   "spellId": 233
+  },
+  {
+   "abilityId": 782,
+   "contentId": 1139,
+   "spellId": 209
+  },
+  {
+   "abilityId": 786,
+   "contentId": 1143,
+   "spellId": 231
+  },
+  {
+   "abilityId": 787,
+   "contentId": 1144,
+   "spellId": 232
+  },
+  {
+   "abilityId": 789,
+   "contentId": 1146,
+   "spellId": 227
+  },
+  {
+   "abilityId": 795,
+   "contentId": 1152,
+   "spellId": 228
+  },
+  {
+   "abilityId": 799,
+   "contentId": 1156,
+   "spellId": 215
+  },
+  {
+   "abilityId": 800,
+   "contentId": 1157,
+   "spellId": 210
+  },
+  {
+   "abilityId": 801,
+   "contentId": 1158,
+   "spellId": 208
+  },
+  {
+   "abilityId": 820,
+   "contentId": 1177,
+   "spellId": 217
+  },
+  {
+   "abilityId": 843,
+   "contentId": 1200,
+   "spellId": 216
+  },
+  {
+   "abilityId": 844,
+   "contentId": 1201,
+   "spellId": 213
+  },
+  {
+   "abilityId": 855,
+   "contentId": 1212,
+   "spellId": 212
+  },
+  {
+   "abilityId": 92,
+   "contentId": 1241,
+   "spellId": 222
+  },
+  {
+   "abilityId": 104,
+   "contentId": 1252,
+   "spellId": 231
+  },
+  {
+   "abilityId": 105,
+   "contentId": 1253,
+   "spellId": 207
+  },
+  {
+   "abilityId": 113,
+   "contentId": 1261,
+   "spellId": 218
+  },
+  {
+   "abilityId": 114,
+   "contentId": 1262,
+   "spellId": 220
+  },
+  {
+   "abilityId": 115,
+   "contentId": 1263,
+   "spellId": 219
+  },
+  {
+   "abilityId": 118,
+   "contentId": 1266,
+   "spellId": 224
+  },
+  {
+   "abilityId": 120,
+   "contentId": 1268,
+   "spellId": 212
+  },
+  {
+   "abilityId": 121,
+   "contentId": 1269,
+   "spellId": 221
+  },
+  {
+   "abilityId": 123,
+   "contentId": 1271,
+   "spellId": 227
+  },
+  {
+   "abilityId": 127,
+   "contentId": 1275,
+   "spellId": 223
+  },
+  {
+   "abilityId": 138,
+   "contentId": 1286,
+   "spellId": 205
+  },
+  {
+   "abilityId": 139,
+   "contentId": 1287,
+   "spellId": 230
+  },
+  {
+   "abilityId": 145,
+   "contentId": 1293,
+   "spellId": 215
+  },
+  {
+   "abilityId": 147,
+   "contentId": 1295,
+   "spellId": 213
+  },
+  {
+   "abilityId": 149,
+   "contentId": 1297,
+   "spellId": 216
+  },
+  {
+   "abilityId": 154,
+   "contentId": 1302,
+   "spellId": 217
+  },
+  {
+   "abilityId": 165,
+   "contentId": 1313,
+   "spellId": 232
+  },
+  {
+   "abilityId": 172,
+   "contentId": 1320,
+   "spellId": 214
+  },
+  {
+   "abilityId": 191,
+   "contentId": 1339,
+   "spellId": 233
+  },
+  {
+   "abilityId": 192,
+   "contentId": 1340,
+   "spellId": 229
+  },
+  {
+   "abilityId": 193,
+   "contentId": 1341,
+   "spellId": 226
+  },
+  {
+   "abilityId": 195,
+   "contentId": 1343,
+   "spellId": 228
+  },
+  {
+   "abilityId": 198,
+   "contentId": 1346,
+   "spellId": 234
+  },
+  {
+   "abilityId": 202,
+   "contentId": 1350,
+   "spellId": 225
+  },
+  {
+   "abilityId": 210,
+   "contentId": 1358,
+   "spellId": 210
+  },
+  {
+   "abilityId": 211,
+   "contentId": 1359,
+   "spellId": 211
+  },
+  {
+   "abilityId": 212,
+   "contentId": 1360,
+   "spellId": 209
+  },
+  {
+   "abilityId": 213,
+   "contentId": 1361,
+   "spellId": 208
+  },
+  {
+   "abilityId": 896,
+   "contentId": 1377,
+   "spellId": 207
+  },
+  {
+   "abilityId": 897,
+   "contentId": 1378,
+   "spellId": 220
+  },
+  {
+   "abilityId": 932,
+   "contentId": 1413,
+   "spellId": 230
+  },
+  {
+   "abilityId": 941,
+   "contentId": 1422,
+   "spellId": 226
+  },
+  {
+   "abilityId": 984,
+   "contentId": 1465,
+   "spellId": 226
+  },
+  {
+   "abilityId": 985,
+   "contentId": 1466,
+   "spellId": 221
+  },
+  {
+   "abilityId": 1011,
+   "contentId": 1524,
+   "spellId": 205
+  },
+  {
+   "abilityId": 1066,
+   "contentId": 1579,
+   "spellId": 224
+  },
+  {
+   "abilityId": 1069,
+   "contentId": 1582,
+   "spellId": 211
+  },
+  {
+   "abilityId": 1078,
+   "contentId": 1591,
+   "spellId": 229
+  },
+  {
+   "abilityId": 1107,
+   "contentId": 1619,
+   "spellId": 225
+  },
+  {
+   "abilityId": 248,
+   "contentId": 1654,
+   "spellId": 225
+  },
+  {
+   "abilityId": 1157,
+   "contentId": 1672,
+   "spellId": 234
+  },
+  {
+   "abilityId": 1173,
+   "contentId": 1688,
+   "spellId": 233
+  }
+ ]
+}
