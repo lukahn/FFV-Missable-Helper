@@ -15,7 +15,7 @@ public sealed class Plugin : BasePlugin
 {
     public const string PluginGuid = "com.lukahn.ffv.missablehelper";
     public const string PluginName = "FFV Missable Helper";
-    public const string PluginVersion = "0.2.0";
+    public const string PluginVersion = "1.0.0";
 
     internal static ManualLogSource LogSource;
     internal static ConfigEntry<bool> AreaPopupEnabled;
