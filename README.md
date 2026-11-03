@@ -135,14 +135,24 @@ python tools/make_map_stubs.py --install   # repository maps/ + game folder
 
 ## How progress is read
 
-Nothing has to be ticked off by hand except pianos.
+Nothing has to be ticked off by hand except pianos, and blue magic if a spell is read wrong.
 
 | Row | Source |
 | --- | --- |
 | Chests / Items | The game's treasure flags (`DataStorage`, `Category.kTreasureFlag1..4`). Each guide entry carries the flag ids of the box(es) that hold it. |
 | Bestiary | `PictureBookSaveManager.SaveData.MonsterDefeats` — the same data the in-game bestiary uses. Monsters are matched to the guide by name. |
-| Blue magic | The party's learned abilities, mapped back through the game's blue-spell alias table (the same approach as FFV Blue Mage Helper). |
+| Blue magic | The party's learned abilities, mapped back through the game's blue-spell alias table (the same approach as FFV Blue Mage Helper). Enter on a row teaches or forgets that spell. |
 | Piano | Manual ticks, stored in `BepInEx/config/FFVMissableHelper/ticks.json`. |
+
+Blue magic is the one row with two id spaces in the save, and they overlap: a blue spell is
+stored as owned *magic* under a content id (`649`–`678`) and as an *ability* under an ability id
+(`383`–`412`). Those ranges collide with ordinary magic — content `403` is the black magic Bio
+while ability `403` is the blue magic Transfusion — so each list is only ever resolved through its
+own table. Reading them together reported Bio, Speed and Slow as blue spells the party already
+knew. Enter on a blue row writes the spell through the game's own magic client (so the game's
+list agrees); if the client has not been seen yet in this session, the row still answers, because
+the tick is stored in `ticks.json` and overrides what the save says. Pressing Enter a third time
+drops the hand tick and goes back to reading the save.
 
 Chest and item counts come from the game's own treasure table, so a row's `y` matches what the
 achievement counter sees. Guide entries the wiki does not list (the twelve tablet chests in the
@@ -242,7 +252,12 @@ Three fields there exist because the IGN pages are not complete on their own:
 - The **row icons** come from the game itself at runtime (`IconTextUtility`). For personal use the
   four 12 px sprites are also kept in `assets/game/` as an embedded fallback; they are © Square Enix.
   The chest and star are drawn by `tools/make_icons.py`.
-- The panel graphics are generated at runtime, the same way FFV Blue Mage Helper does it.
+- The panel graphics are generated at runtime, the same way FFV Blue Mage Helper does it. Both the
+  helper screen and the corner popup are a nine-sliced frame of our own with a plain gradient
+  behind it. The frame asks for a fixed thickness in UI units (`UiKit.SetBorderUnits`) instead of
+  trusting the sprite's pixels-per-unit: uGUI scales a nine-slice border by the sprite rate over
+  the canvas rate, so a border that comes out too thin makes it stretch the corner tiles across
+  the whole panel — which is what drew a stray circle inside the window frame.
 
 ## Known limitations
 

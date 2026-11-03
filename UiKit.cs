@@ -126,17 +126,101 @@ internal static class UiKit
                 new Vector2(0.5f, 0.5f),
                 1f,                                        // one texture pixel = one UI unit
                 0,
-                SpriteMeshType.FullRect,
+                SpriteMeshType.FullRect,                   // a Tight mesh drops the border
                 new Vector4(FrameBorder, FrameBorder, FrameBorder, FrameBorder));
             return _panelSprite;
         }
     }
 
     /// <summary>Thickness of the drawn frame in UI units (the sprite runs at 1 unit per pixel).</summary>
-    private const int FrameBorder = 8;
+    public const int FrameBorder = 5;
 
     /// <summary>How thick the drawn frame is, and so how far inside it a fill should start.</summary>
     public const float RingThickness = FrameBorder;
+
+    /// <summary>
+    /// Canvas units per sprite texture pixel, i.e. the divisor uGUI applies to a sprite's rate.
+    /// </summary>
+    private static float CanvasRate(Graphic graphic)
+    {
+        float rate = 0f;
+
+        try
+        {
+            var canvas = graphic != null ? graphic.canvas : null;
+            if (canvas != null)
+                rate = canvas.referencePixelsPerUnit;
+        }
+        catch
+        {
+            // fall through to the parent lookup
+        }
+
+        if (rate <= 0.01f && graphic != null)
+        {
+            try
+            {
+                var canvas = graphic.GetComponentInParent<Canvas>();
+                if (canvas != null)
+                    rate = canvas.referencePixelsPerUnit;
+            }
+            catch
+            {
+                // fall through to the default
+            }
+        }
+
+        return rate > 0.01f && !float.IsNaN(rate) ? rate : 100f;
+    }
+
+    /// <summary>The thickest side of a sprite's nine-slice border, in texture pixels.</summary>
+    private static float BorderTexels(Sprite sprite)
+    {
+        var border = sprite.border;
+        return Mathf.Max(Mathf.Max(border.x, border.y), Mathf.Max(border.z, border.w));
+    }
+
+    /// <summary>
+    /// Forces a nine-sliced frame to draw its border at exactly <paramref name="units"/>.
+    ///
+    /// uGUI sizes a border as (sprite border) x (sprite rate / canvas rate) x multiplier, so a
+    /// sprite made at one pixel per unit comes out a hundredth of its intended thickness on a
+    /// canvas that references a hundred pixels per unit. When the border collapses, uGUI
+    /// stretches the corner tiles across the whole panel instead: that is the stray circle
+    /// that used to sit inside the window frame. Setting the multiplier here makes the frame
+    /// the same thickness on any canvas, at any resolution.
+    /// </summary>
+    public static float SetBorderUnits(Image image, float units)
+    {
+        if (image == null || image.sprite == null)
+            return 0f;
+
+        float texels = BorderTexels(image.sprite);
+        if (texels <= 0.01f)
+        {
+            // no border at all: a sliced image would stretch the artwork, so draw it plain
+            if (image.type != Image.Type.Simple)
+                image.type = Image.Type.Simple;
+            return 0f;
+        }
+
+        float perTexel = image.sprite.pixelsPerUnit / CanvasRate(image);
+        if (perTexel <= 0.0001f)
+            return 0f;
+
+        image.pixelsPerUnitMultiplier = units / (texels * perTexel);
+        return units;
+    }
+
+    /// <summary>How thick a panel's frame is actually drawn, in UI units.</summary>
+    public static float BorderUnits(Image image)
+    {
+        if (image == null || image.sprite == null)
+            return 0f;
+
+        float multiplier = image.pixelsPerUnitMultiplier > 0f ? image.pixelsPerUnitMultiplier : 1f;
+        return BorderTexels(image.sprite) * (image.sprite.pixelsPerUnit / CanvasRate(image)) * multiplier;
+    }
 
     public static GameObject CreateCanvas(string name, int sortingOrder)
     {
@@ -167,6 +251,9 @@ internal static class UiKit
         image.type = Image.Type.Sliced;
         image.color = Color.white;
         image.raycastTarget = false;
+
+        // draw the frame at its texture size, whatever rate this canvas runs at
+        SetBorderUnits(image, FrameBorder);
         return image;
     }
 
@@ -334,11 +421,9 @@ internal static class UiKit
     };
 
     /// <summary>
-    /// The menu window, drawn the way the game draws its own: a thin bright outer line, a dark
-    /// gap, a second line, and a fill that runs light at the top to dark at the bottom.
-    ///
-    /// The sprite runs at one texture pixel per UI unit and is nine-sliced, so the frame
-    /// stays the same thickness however large the panel gets while the middle stretches.
+    /// The frame of our own window: a dark outer line, a bright double line and a soft inner
+    /// line, drawn as a nine-slice. Nothing fills the middle - the gradient laid behind it
+    /// does - so the frame never has to be stretched to match a panel size.
     /// </summary>
     private static Texture2D CreateBoxTexture()
     {
@@ -351,21 +436,12 @@ internal static class UiKit
             wrapMode = TextureWrapMode.Clamp
         };
 
-        var top = new Color(0.30f, 0.44f, 0.86f, 1f);
-        var bottom = new Color(0.03f, 0.07f, 0.26f, 1f);
-
         for (int y = 0; y < size; y++)
         {
-            // the top of a texture is the last row, so the light end is at y = size - 1
-            float t = y / (float)(size - 1);
-            Color body = Color.Lerp(bottom, top, t);
-
             for (int x = 0; x < size; x++)
             {
                 int edge = Mathf.Min(Mathf.Min(x, y), Mathf.Min(size - 1 - x, size - 1 - y));
-                Color ring = RingColor(edge);
-
-                texture.SetPixel(x, y, ring.a > 0f ? ring : body);
+                texture.SetPixel(x, y, RingColor(edge));
             }
         }
 

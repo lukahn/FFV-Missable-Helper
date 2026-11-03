@@ -79,9 +79,15 @@ public sealed class AreaPopupBehaviour : MonoBehaviour
     private const float FadeIn = 0.18f;
     private const float FadeOut = 0.5f;
 
+    private const float Width = 440f;
+    private const float Pad = 18f;
+    private const float TitleGap = 6f;
+
     private CanvasGroup _group;
     private Text _title;
     private Text _body;
+    private Image _boxImage;
+    private Image _fill;
     private RectTransform _box;
     private GuideLocation _location;
 
@@ -192,6 +198,7 @@ public sealed class AreaPopupBehaviour : MonoBehaviour
         if (_location == null || _title == null)
             return;
 
+        ApplyWindow();
         Progress.Refresh(force: true);
         var status = LocationStatus.Build(_location);
 
@@ -219,8 +226,7 @@ public sealed class AreaPopupBehaviour : MonoBehaviour
 
         _body.text = builder.ToString().TrimEnd();
 
-        float height = Mathf.Max(96f, _body.preferredHeight + _title.preferredHeight + 40f);
-        _box.sizeDelta = new Vector2(440f, height);
+        LayoutText();
     }
 
     /// <summary>Outstanding work in one world, as a single muted line.</summary>
@@ -299,27 +305,26 @@ public sealed class AreaPopupBehaviour : MonoBehaviour
         _group.interactable = false;
 
         var box = UiKit.CreatePanel(transform, "Box");
+        _boxImage = box;
         _box = UiKit.Rect(box.gameObject);
         _box.anchorMin = new Vector2(0f, 1f);
         _box.anchorMax = new Vector2(0f, 1f);
         _box.pivot = new Vector2(0f, 1f);
         _box.anchoredPosition = new Vector2(28f, -28f);
-        _box.sizeDelta = new Vector2(440f, 120f);
+        _box.sizeDelta = new Vector2(Width, 120f);
 
         // Same arrangement as the main window: the box is only a frame, and the background is
         // a plain stretched gradient laid inside it. A gradient with no nine-slice of its own
         // cannot warp into a shape, so the panel resizing to fit the text is harmless.
-        UiKit.CreateFill(box.transform, "Fill", UiKit.RingThickness);
+        _fill = UiKit.CreateFill(box.transform, "Fill", UiKit.RingThickness);
 
         _title = UiKit.CreateText(box.transform, "Title", 24, TextAnchor.UpperLeft);
+        _title.color = UiKit.Gold;
         var titleRect = UiKit.Rect(_title.gameObject);
         titleRect.anchorMin = new Vector2(0f, 1f);
         titleRect.anchorMax = new Vector2(1f, 1f);
         titleRect.pivot = new Vector2(0.5f, 1f);
-        titleRect.offsetMin = new Vector2(20f, 0f);
-        titleRect.offsetMax = new Vector2(-20f, -14f);
-        titleRect.sizeDelta = new Vector2(titleRect.sizeDelta.x, 30f);
-        _title.color = UiKit.Gold;
+        titleRect.sizeDelta = new Vector2(0f, 30f);
 
         _body = UiKit.CreateText(box.transform, "Body", 20, TextAnchor.UpperLeft);
         _body.color = UiKit.TextColor;
@@ -327,8 +332,50 @@ public sealed class AreaPopupBehaviour : MonoBehaviour
         bodyRect.anchorMin = new Vector2(0f, 1f);
         bodyRect.anchorMax = new Vector2(1f, 1f);
         bodyRect.pivot = new Vector2(0.5f, 1f);
-        bodyRect.offsetMin = new Vector2(20f, 0f);
-        bodyRect.offsetMax = new Vector2(-20f, -46f);
-        bodyRect.sizeDelta = new Vector2(bodyRect.sizeDelta.x, 60f);
+        bodyRect.sizeDelta = new Vector2(0f, 60f);
+
+        ApplyWindow();
+    }
+
+    /// <summary>
+    /// Re-asserts the frame's thickness and the fill's inset. The panel is created before the
+    /// canvas has laid anything out, so this is also where a frame that came out the wrong
+    /// thickness gets corrected: too thin a border is stretched corner-to-corner by uGUI and
+    /// shows up as a circle inside the frame instead of a flat background.
+    /// </summary>
+    private void ApplyWindow()
+    {
+        float border = UiKit.SetBorderUnits(_boxImage, UiKit.FrameBorder);
+        if (_fill == null)
+            return;
+
+        float inset = border > 0f ? border : UiKit.RingThickness;
+        _fill.rectTransform.offsetMin = new Vector2(inset, inset);
+        _fill.rectTransform.offsetMax = new Vector2(-inset, -inset);
+    }
+
+    /// <summary>
+    /// Sizes the box around the text it actually has: the title, the gap, the body and the
+    /// padding. Measuring the labels rather than guessing a height is what stopped the last
+    /// line of a long popup from being cut off by the bottom edge of its own frame.
+    /// </summary>
+    private void LayoutText()
+    {
+        if (_box == null || _title == null || _body == null)
+            return;
+
+        float titleHeight = Mathf.Ceil(_title.preferredHeight);
+        float bodyHeight = Mathf.Ceil(_body.preferredHeight);
+        float bodyTop = Pad + titleHeight + TitleGap;
+
+        var titleRect = UiKit.Rect(_title.gameObject);
+        titleRect.offsetMin = new Vector2(Pad, -(Pad + titleHeight));
+        titleRect.offsetMax = new Vector2(-Pad, -Pad);
+
+        var bodyRect = UiKit.Rect(_body.gameObject);
+        bodyRect.offsetMin = new Vector2(Pad, -(bodyTop + bodyHeight));
+        bodyRect.offsetMax = new Vector2(-Pad, -bodyTop);
+
+        _box.sizeDelta = new Vector2(Width, bodyTop + bodyHeight + Pad);
     }
 }

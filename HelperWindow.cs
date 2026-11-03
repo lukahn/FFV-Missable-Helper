@@ -338,20 +338,31 @@ public sealed class HelperWindowBehaviour : MonoBehaviour
     {
         bool fromGame = GameSkin.Frame != null;
 
+        // the game's own frame, measured in the game's own units; ours when there is none
+        float border = fromGame ? GameSkin.FrameBorderUnits : UiKit.FrameBorder;
+
         if (_panelImage != null)
         {
             _panelImage.sprite = fromGame ? GameSkin.Frame : UiKit.PanelSprite;
             _panelImage.type = fromGame ? GameSkin.FrameType : Image.Type.Sliced;
-            _panelImage.pixelsPerUnitMultiplier = fromGame ? GameSkin.FrameMultiplier : 1f;
             _panelImage.color = Color.white;
+
+            // ask for a fixed thickness instead of trusting the sprite's rate: a border that
+            // comes out too thin makes uGUI stretch the corners over the whole panel
+            if (border <= 0f || UiKit.SetBorderUnits(_panelImage, border) <= 0f)
+                _panelImage.pixelsPerUnitMultiplier = fromGame ? GameSkin.FrameMultiplier : 1f;
         }
 
         if (_fillImage != null)
         {
-            // without the game's sprite the drawn panel already carries its own gradient
-            _fillImage.gameObject.SetActive(fromGame);
-            _fillImage.rectTransform.offsetMin = new Vector2(PanelInset, PanelInset);
-            _fillImage.rectTransform.offsetMax = new Vector2(-PanelInset, -PanelInset);
+            // Both sprites are frames with nothing in the middle, so the gradient is what
+            // fills the window and it is never switched off - only moved in far enough to
+            // clear whichever border it is sitting under.
+            float inset = fromGame ? Mathf.Max(PanelInset, border) : border;
+
+            _fillImage.gameObject.SetActive(true);
+            _fillImage.rectTransform.offsetMin = new Vector2(inset, inset);
+            _fillImage.rectTransform.offsetMax = new Vector2(-inset, -inset);
         }
 
         if (GameSkin.Font == null && fallbackFont != null)
@@ -767,6 +778,13 @@ public sealed class HelperWindowBehaviour : MonoBehaviour
             return;
 
         var line = rows[_selected];
+
+        if (line.Spell != null)
+        {
+            ToggleBlue(line.Spell);
+            return;
+        }
+
         bool changed;
 
         if (line.Entry != null)
@@ -832,6 +850,28 @@ public sealed class HelperWindowBehaviour : MonoBehaviour
         }
 
         Progress.Invalidate("helper piano");
+        Progress.Refresh(force: true);
+        _selected = Mathf.Clamp(_selected, 0, Mathf.Max(0, PayloadCount() - 1));
+        EnsureVisible();
+        PaintRows();
+    }
+
+    /// <summary>
+    /// Enter on a blue spell. When the game's magic client has been seen we write the spell
+    /// into the save (taught or forgotten) so the game's own list agrees; when it has not,
+    /// the row still answers, because the tick then overrides what the helper read.
+    /// </summary>
+    private void ToggleBlue(BlueEntry spell)
+    {
+        bool wanted = !Progress.IsBlueLearned(spell.Id);
+
+        if (Unlock.SetBlueLearned(spell, wanted))
+            Progress.SetManual(Progress.BlueKey(spell.Id), 0);       // the save is the truth now
+        else
+            Progress.SetManual(Progress.BlueKey(spell.Id), wanted ? 1 : 2);
+
+        Progress.SaveManual();
+        Progress.Invalidate("helper blue");
         Progress.Refresh(force: true);
         _selected = Mathf.Clamp(_selected, 0, Mathf.Max(0, PayloadCount() - 1));
         EnsureVisible();
@@ -1513,6 +1553,7 @@ public sealed class HelperWindowBehaviour : MonoBehaviour
         public GuideEntry Entry;            // chest / item entry behind this row, if any
         public BestiaryEntry Monster;       // bestiary entry behind this row, if any
         public PianoEntry Piano;            // piano behind this row, if any
+        public BlueEntry Spell;             // blue magic spell behind this row, if any
     }
 
     private List<PayloadLine> PayloadRows()
@@ -1577,10 +1618,12 @@ public sealed class HelperWindowBehaviour : MonoBehaviour
                     lines.Add(MarkDone(new PayloadLine
                     {
                         Main = spell.Name,
-                        Detail = string.Join(", ", spell.Enemies),
+                        Detail = done ? "known - Enter to forget" : "Enter once learned",
                         DetailColor = UiKit.Muted,
                         Icon = "hat",
-                        Guide = "Learn it from " + string.Join(", ", spell.Enemies) + "."
+                        Guide = "Learn it from " + string.Join(", ", spell.Enemies) +
+                                ". Enter ticks or unticks it by hand.",
+                        Spell = spell
                     }, done));
                 }
                 break;

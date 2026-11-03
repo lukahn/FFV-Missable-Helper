@@ -140,14 +140,23 @@ internal static class Progress
 
     private static void RefreshBlueMagic()
     {
-        var learned = new HashSet<int>();
+        // Two id namespaces come out of the save, and they overlap numerically. Ability ids
+        // (383..412 hold the blue spells) and content ids (649..678) must never be resolved
+        // through each other's table: content 403 is the black magic Bio, ability 403 is the
+        // blue magic Transfusion, so one shared table claimed Bio, Speed and Slow as blue
+        // magic the player already had.
+        var abilityIds = new HashSet<int>();
+        var contentIds = new HashSet<int>();
+
         try
         {
             var userData = UserDataManager.Instance();
             if (userData != null)
             {
-                AddRange(learned, userData.LearnedAbilityList);
-                AddRange(learned, userData.OwnedMagicList);
+                AddRange(abilityIds, userData.LearnedAbilityList);
+
+                // the owned *magic* list is keyed by content id
+                AddRange(contentIds, userData.OwnedMagicList);
 
                 var characters = userData.OwnedCharacterList;
                 if (characters != null)
@@ -157,7 +166,10 @@ internal static class Progress
                         if (character == null)
                             continue;
 
-                        AddRange(learned, character.LearningAbilitys);
+                        // the "learning" list is a job-progress list keyed by content id (the
+                        // learning table is), so it is read in the content namespace only:
+                        // blue magic is never learned through job progress
+                        AddRange(contentIds, character.LearningAbilitys);
 
                         var abilities = character.OwnedAbilityList;
                         if (abilities == null)
@@ -169,11 +181,11 @@ internal static class Progress
                             {
                                 int id = owned?.saveData?.abilityId ?? 0;
                                 if (id > 0)
-                                    learned.Add(id);
+                                    abilityIds.Add(id);
 
                                 int contentId = owned?.saveData?.contentId ?? 0;
                                 if (contentId > 0)
-                                    learned.Add(contentId);
+                                    contentIds.Add(contentId);
                             }
                             catch
                             {
@@ -189,15 +201,36 @@ internal static class Progress
             Plugin.LogSource?.LogWarning($"Could not read learned abilities: {e.Message}");
         }
 
-        // blue magic is stored under enemy-ability alias ids
-        var resolved = new HashSet<int>(learned);
-        foreach (int id in learned)
+        var learned = new HashSet<int>();
+
+        foreach (int id in abilityIds)
         {
-            if (Guide.BlueByAlias.TryGetValue(id, out int spellId))
-                resolved.Add(spellId);
+            if (Guide.BlueSpellIds.Contains(id))
+                learned.Add(id);
+            else if (Guide.BlueByAbilityAlias.TryGetValue(id, out int spellId))
+                learned.Add(spellId);
         }
 
-        _learnedBlue = resolved;
+        foreach (int id in contentIds)
+        {
+            if (Guide.BlueByContentAlias.TryGetValue(id, out int spellId))
+                learned.Add(spellId);
+            else if (Guide.BlueSpellIds.Contains(id))
+                learned.Add(id);
+        }
+
+        _learnedBlue = learned;
+
+        if (Plugin.Verbose.Value)
+        {
+            var names = new List<string>();
+            foreach (int id in learned)
+                names.Add(Guide.BlueName(id) ?? id.ToString());
+            names.Sort(StringComparer.OrdinalIgnoreCase);
+
+            Plugin.Trace($"blue: learned ({names.Count}) [{string.Join(", ", names)}] " +
+                         $"from {abilityIds.Count} ability ids and {contentIds.Count} content ids");
+        }
     }
 
     private static void AddRange(HashSet<int> target, Il2CppSystem.Collections.Generic.HashSet<int> source)
@@ -306,7 +339,24 @@ internal static class Progress
         return false;
     }
 
-    public static bool IsBlueLearned(BlueEntry entry) => _learnedBlue.Contains(entry.Id);
+    public static bool IsBlueLearned(BlueEntry entry) => entry != null && IsBlueLearned(entry.Id);
+
+    /// <summary>
+    /// Blue magic as the helper reports it: normally whatever the save says, but a hand tick
+    /// wins, so a spell the helper read wrong can be unticked (and ticked again) from the list.
+    /// </summary>
+    public static bool IsBlueLearned(int spellId)
+    {
+        switch (ManualValue(BlueKey(spellId)))
+        {
+            case 1: return true;
+            case 2: return false;
+            default: return _learnedBlue.Contains(spellId);
+        }
+    }
+
+    /// <summary>What the save itself says, ignoring any hand tick.</summary>
+    public static bool IsBlueLearnedInSave(int spellId) => _learnedBlue.Contains(spellId);
 
     public static bool IsEntryOpened(GuideEntry entry)
     {
@@ -333,6 +383,24 @@ internal static class Progress
 
     public static string ManualKey(GuideLocation location, PianoEntry piano) =>
         $"{location.Key}|piano|{piano.Slot}";
+
+    /// <summary>The hand tick that overrides a blue spell's learned state.</summary>
+    public static string BlueKey(int spellId) => $"blue|{spellId}";
+
+    /// <summary>0 = follow the save, 1 = forced learned, 2 = forced not learned.</summary>
+    public static int ManualValue(string key)
+    {
+        lock (FileLock)
+            return _manual.TryGetValue(key, out int value) ? value : 0;
+    }
+
+    public static void SetManual(string key, int value)
+    {
+        lock (FileLock)
+            _manual[key] = value;
+
+        _nextManualSave = UnityEngine.Time.unscaledTime + 0.5f;
+    }
 
     public static bool IsManual(string key)
     {

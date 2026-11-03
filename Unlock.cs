@@ -32,6 +32,12 @@ internal static class Unlock
     /// <summary>The live OwnedItemClient, captured from the game's own item calls.</summary>
     internal static OwnedItemClient Items { get; set; }
 
+    /// <summary>
+    /// The live user-data client, captured from the game's own magic calls. Blue magic can
+    /// only be added or removed through it, and there is no static accessor for it.
+    /// </summary>
+    internal static UserDataClient UserData { get; set; }
+
     // ------------------------------------------------------------------- chests
     /// <summary>Sets or clears the game's treasure flag, i.e. marks the chest as opened.</summary>
     public static bool SetOpened(GuideEntry entry, bool opened)
@@ -61,6 +67,69 @@ internal static class Unlock
         catch (Exception e)
         {
             Plugin.LogSource?.LogWarning($"[Unlock] could not set the treasure flag: {e.Message}");
+            return false;
+        }
+    }
+
+    // ------------------------------------------------------------- blue magic
+    /// <summary>
+    /// Teaches or forgets a blue spell in the save, so the game's own list and the helper
+    /// agree.
+    ///
+    /// Blue magic is stored twice: as owned magic under a content id (649..678) and as an
+    /// ability (383..412) for the Blue command. Both are written, because the menus read
+    /// different ones. Nothing happens when the game never handed us its client, which is the
+    /// case until the player learns their first spell in this session.
+    /// </summary>
+    public static bool SetBlueLearned(BlueEntry entry, bool learned)
+    {
+        if (entry == null)
+            return false;
+
+        var client = UserData;
+        if (client == null)
+            return false;
+
+        try
+        {
+            var userData = UserDataManager.Instance();
+            if (userData == null)
+                return false;
+
+            int contentId = 0;
+            if (Guide.BlueContentIdBySpell.TryGetValue(entry.Id, out int content))
+                contentId = content;
+
+            int abilityId = 0;
+            if (Guide.BlueAbilityIdBySpell.TryGetValue(entry.Id, out int ability))
+                abilityId = ability;
+
+            if (contentId > 0)
+            {
+                if (learned)
+                    client.AddOwnedMagic(contentId);
+                else
+                    client.RemoveOwnedMagic(contentId);
+            }
+
+            // keep the ability list in step: the Blue command reads that one
+            var abilities = userData.LearnedAbilityList;
+            if (abilities != null && abilityId > 0)
+            {
+                if (learned)
+                    abilities.Add(abilityId);
+                else
+                    abilities.Remove(abilityId);
+            }
+
+            Plugin.Trace(
+                $"unlock: blue {entry.Name} -> {(learned ? "learned" : "forgotten")} " +
+                $"(content {contentId}, ability {abilityId})");
+            return true;
+        }
+        catch (Exception e)
+        {
+            Plugin.LogSource?.LogWarning($"[Unlock] could not set blue magic {entry.Name}: {e.Message}");
             return false;
         }
     }

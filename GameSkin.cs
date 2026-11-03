@@ -22,6 +22,13 @@ internal static class GameSkin
     public static Image.Type FrameType { get; private set; } = Image.Type.Sliced;
     public static float FrameMultiplier { get; private set; } = 1f;
 
+    /// <summary>
+    /// How thick the menu draws the frame, in the canvas units of the menu itself. Measuring
+    /// it (rather than copying the multiplier) lets the helper ask for the same thickness in
+    /// whatever canvas the panel ends up in.
+    /// </summary>
+    public static float FrameBorderUnits { get; private set; }
+
     private static readonly HashSet<string> LoggedSprites = new();
 
     /// <summary>
@@ -48,12 +55,13 @@ internal static class GameSkin
 
         try
         {
-            frame = LargestSlicedImage(root, out var type, out float multiplier);
+            frame = LargestSlicedImage(root, out var type, out float multiplier, out float borderUnits);
             if (frame != null)
             {
                 Frame = frame;
                 FrameType = type;
                 FrameMultiplier = multiplier;
+                FrameBorderUnits = borderUnits;
             }
         }
         catch (Exception e)
@@ -81,6 +89,7 @@ internal static class GameSkin
         Plugin.Trace(
             $"skin: font={(Font != null ? Font.name : "none")}, " +
             $"frame={(Frame != null ? Frame.name : "drawn")}, " +
+            $"border={FrameBorderUnits:0.#}u, " +
             $"cursor={(Cursor != null ? Cursor.name : "drawn")}");
     }
 
@@ -125,10 +134,11 @@ internal static class GameSkin
     /// border at any panel size.
     /// </summary>
     private static Sprite LargestSlicedImage(
-        RectTransform root, out Image.Type type, out float multiplier)
+        RectTransform root, out Image.Type type, out float multiplier, out float borderUnits)
     {
         type = Image.Type.Sliced;
         multiplier = 1f;
+        borderUnits = 0f;
 
         Sprite best = null;
         float bestArea = 0f;
@@ -151,9 +161,34 @@ internal static class GameSkin
             bestArea = area;
             type = image.type;
             multiplier = image.pixelsPerUnitMultiplier;
+            borderUnits = RenderedBorderUnits(image);
         }
 
         return best;
+    }
+
+    /// <summary>How thick this image's nine-slice border comes out, in canvas units.</summary>
+    private static float RenderedBorderUnits(Image image)
+    {
+        try
+        {
+            var border = image.sprite.border;
+            float texels = Mathf.Max(Mathf.Max(border.x, border.y), Mathf.Max(border.z, border.w));
+
+            float canvasRate = 100f;
+            var canvas = image.canvas;
+            if (canvas != null && canvas.referencePixelsPerUnit > 0.01f)
+                canvasRate = canvas.referencePixelsPerUnit;
+
+            float rate = image.sprite.pixelsPerUnit / canvasRate;
+            float multiplier = image.pixelsPerUnitMultiplier > 0f ? image.pixelsPerUnitMultiplier : 1f;
+
+            return texels * rate * multiplier;
+        }
+        catch
+        {
+            return 0f;
+        }
     }
 
     /// <summary>The selector hand, found by name anywhere in the menu.</summary>

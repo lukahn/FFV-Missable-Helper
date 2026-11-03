@@ -35,6 +35,11 @@ internal static class ProgressEvents
         Patch(harmony, typeof(OwnedItemClient), "AddAbility", nameof(AfterItem));
         Patch(harmony, typeof(OwnedItemClient), "AddMagicStone", nameof(AfterItem));
 
+        // a spell learned or forgotten (blue magic included): hands us the client that can
+        // write magic back, and moves the helper's counts
+        Patch(harmony, typeof(UserDataClient), "AddOwnedMagic", nameof(AfterMagic));
+        Patch(harmony, typeof(UserDataClient), "RemoveOwnedMagic", nameof(AfterMagic));
+
         // walking into another area
         Patch(harmony, typeof(UserDataManager), "set_CurrentAreaId", nameof(AfterArea));
         Patch(harmony, typeof(UserDataManager), "set_CurrentMapId", nameof(AfterArea));
@@ -58,6 +63,13 @@ internal static class ProgressEvents
         // the game's own client: the one object that can add or remove items safely
         Unlock.Items = __instance;
         Invalidate("item obtained");
+    }
+
+    private static void AfterMagic(UserDataClient __instance)
+    {
+        // same idea for magic: this instance is what a blue spell is written through
+        Unlock.UserData = __instance;
+        Invalidate("magic changed");
     }
 
     private static void AfterArea()
